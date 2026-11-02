@@ -6,7 +6,9 @@ permissions:
 on:
   push:
     branches:
-      - main # Ou o nome da sua branch principal
+      - main
+      - master
+  workflow_dispatch: # Permite disparar manualmente na aba Actions do GitHub
 
 jobs:
   build-and-deploy:
@@ -26,7 +28,8 @@ jobs:
           npm run build
 
       - name: Deploy para GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Nota: verifique se seu projeto usa /dist ou /build
+          publish_dir: ./dist
+          publish_branch: gh-pages
