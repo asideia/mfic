@@ -1,0 +1,6 @@
+{
+  "name": "MFIC - Multi-Format Image Converter",
+  "description": "High-performance client-side batch image converter and resizer with Square Mode letterboxing, 90MB batch safety, and multi-format export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
